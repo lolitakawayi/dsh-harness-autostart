@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Autostart",
+    "description": "Starts DeepSeek Harness automatically with Windows, and lets you inspect, enable or disable that startup entry with one click in Settings → General Settings."
+  }
+}

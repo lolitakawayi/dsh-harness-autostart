@@ -1,0 +1,69 @@
+{
+  "name": "dsh-harness-autostart",
+  "version": "1.0.0",
+  "description": "Starts DeepSeek Harness automatically with Windows, and adds a Settings > General switch plus a dsh_autostart tool to inspect, enable or disable the startup entry.",
+  "icon": "icon.svg",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "lolitakawayi",
+    "email": "3247713441@qq.com"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "autostart",
+    "startup",
+    "windows",
+    "run-key"
+  ],
+  "homepage": "https://github.com/lolitakawayi/dsh-harness-autostart#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolitakawayi/dsh-harness-autostart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lolitakawayi/dsh-harness-autostart/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/icon-180.png",
+    "README.md",
+    "README.zh-CN.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings-general"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/dsh-client-locale": ">=0.2.0-rc.1 <0.2.1-0 || >=0.2.1-rc.1 <0.2.2-0 || >=0.2.2-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-ui-settings-general": ">=0.2.0-rc.1 <0.2.1-0 || >=0.2.1-rc.1 <0.2.2-0 || >=0.2.2-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-host-webserver": ">=0.2.0-rc.1 <0.2.1-0 || >=0.2.1-rc.1 <0.2.2-0 || >=0.2.2-rc.1 <0.3.0-0",
+    "react": "^18.2.0"
+  }
+}

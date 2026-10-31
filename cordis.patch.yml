@@ -1,0 +1,17 @@
+# dsh-autostart: 把 DeepSeek Harness 挂进 Windows 开机启动项，并提供 dsh_autostart 工具管理它。
+- insert:
+    - id: dsh-autostart
+      name: 'dsh-harness-autostart'
+      config:
+        # 插件加载时就确保启动项存在（true = 装完即生效）
+        autoEnable: true
+        # run-key：写 HKCU Run 键（免管理员）；startup-folder：写 shell:startup 启动文件夹
+        method: run-key
+        # 启动值名称 / 启动文件夹里的文件名
+        entryName: DeepSeekHarness
+        # 可执行文件；留空则自动取当前 Harness 进程路径
+        executable: ''
+        # 传给 Harness 的额外参数（数组）
+        args: []
+        # 开机后延迟多少秒再拉起（0 = 立即，经 .cmd 包装实现）
+        delaySeconds: 0

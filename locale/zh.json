@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "开机自启",
+    "description": "让 DeepSeek Harness 随 Windows 开机自动启动，可在设置→通用设置里一键查看、开启或关闭该启动项。"
+  }
+}
